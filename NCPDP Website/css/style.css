@@ -1,0 +1,439 @@
+/* Setting up basic styling for body and html */
+body,
+html {
+height: 100%;
+margin: 0;
+font: 400 15px/1.8 "Lato", sans-serif;
+color: #777;
+}
+
+/*Styling the Navigation Bar and the Footer*/
+nav {
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: 0.6s;
+  background: #26272b;
+  box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.right {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav li {
+  margin: 0 5px;
+}
+
+
+.nav a li {
+  margin-top: 8px;
+}
+
+
+.nav a {
+  color: inherit;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-size: large;
+}
+
+/* Set styles for links within the navigation bar */
+
+.nav a {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.left{
+  margin-left: 30px;
+}
+.left h3{
+  color: white;
+  font-size: 30px;
+}
+.left img{
+  display: none;
+}
+
+.left a {
+  margin-top: 15px;
+}
+
+nav.scrolled {
+  display: flex;
+  justify-content: center;
+}
+
+nav.scrolled .logo {
+  transition: transform 0.3s ease;
+  align-items: center;
+
+}
+nav.scrolled .logo.expanded {
+  transform: rotate(360deg);
+}
+
+nav.scrolled .left h3 {
+ display: none;
+}
+nav.scrolled .left img {
+  display: flex;
+  width: 50px;
+  height: 50px;
+ }
+ nav.scrolled .left{
+  margin-left: 0;
+ }
+
+
+nav.scrolled .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: fit-content;
+  padding: 0 20px;
+  height: 72px;
+  background: #26272b;
+  box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+nav.scrolled .nav .right a li {
+  margin-top: 6px;
+}
+
+nav.scrolled a {
+  font-size: 18px;
+}
+
+nav.scrolled .right a:hover {
+  color: #3366cc;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.right a:hover {
+  color: #3366cc;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+}
+
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5
+}
+
+.site-footer hr.small {
+  margin: 20px 0
+}
+
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px
+}
+
+.site-footer a {
+  color: #737373;
+}
+
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none
+}
+
+.footer-links li {
+  display: block
+}
+
+.footer-links a {
+  color: #737373
+}
+
+.footer-links.inline li {
+  display: inline-block
+}
+
+.site-footer .social-icons a {
+  cursor: pointer;
+}
+
+.copyright-text {
+  margin: 0
+}
+
+@media (max-width:991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px
+  }
+}
+
+@media (max-width:767px) {
+  .site-footer {
+    padding-bottom: 0
+  }
+
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center
+  }
+}
+
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px
+}
+
+@media (max-width:767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600
+  }
+}
+
+#links {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/*****************************************************************************************/
+
+/*Styling for the Main Body of the webpage*/
+/* Styling for background images */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5,
+.bgimg-6,
+.bgimg-7 {
+  white-space: pre-wrap;
+position: relative;
+opacity: 0.65;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* Setting up background images for different sections */
+.bgimg-1 {
+background-image: url("../Images/NCPDP.jpg");
+min-height: 700px;
+}
+
+.bgimg-2 {
+background-image: url("");
+min-height: 500px;
+}
+
+.bgimg-3 {
+background-image: url("");
+min-height: 500px;
+}
+
+.bgimg-4 {
+background-image: url("");
+min-height: 500px;
+}
+
+.bgimg-5 {
+background-image: url("");
+min-height: 500px;
+}
+/* Styling for dark background section */
+.bg-dark {
+color: #ddd;
+background-color: #282e34;
+text-align: center;
+padding: 50px 80px;
+text-align: justify;
+}
+
+/* Styling for light background section */
+.bg-light {
+color: #777;
+background-color: white;
+text-align: center;
+padding: 50px 80px;
+text-align: justify;
+}
+
+/* Styling for light text section */
+.light-text {
+text-align: center;
+color: #f7f7f7;
+}
+
+/* Styling for border section */
+.border {
+  font-size: 25px;
+  color: #f7f7f7;
+}
+
+
+/* Styling for Reference section */
+.bgimg-7 a .border {
+  border-radius: 20px;
+  font-size: 25px;
+  color: #f7f7f7;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+
+.bgimg-7 a .border:hover {
+  font-weight: bold;
+  font-size: 25px;
+  color: #000000;
+  background: linear-gradient(to top left, black, blue, violet, white);
+}
+
+/* Setting up styling for heading and paragraph tags */
+h3 {
+text-align: center;
+}
+
+/* Styling for caption section */
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+/* Styling for caption section's inner border span */
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
+/* Styling for h3 tags */
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 600px) {
+  .bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5,
+.bgimg-6,
+.bgimg-7 {
+  white-space: pre-wrap;
+    background-attachment: scroll;
+  }
+
+  /* Styling for header section on small screens */
+  nav {
+    padding: 20px 0px;
+    margin: 0;
+  }
+
+  /* Styling for header links on small screens */
+  .nav a li {
+    padding: 2px 1px;
+    font-weight: none;
+    font-size: 14px;
+  }
+
+  /* Styling for sticky section on small screens */
+  .sticky {
+    padding: 2px 2px;
+    font-weight: none;
+  }
+}
+
